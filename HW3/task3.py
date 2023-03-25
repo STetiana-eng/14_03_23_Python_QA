@@ -15,7 +15,6 @@ print(len(count))
 #виводить слова які містять букву "o"
 text = input("Enter text: ").lower()
 split = text.split(" ")
-count = []
 for elem in split:
     if elem.find("o") > -1:
         print(elem)
