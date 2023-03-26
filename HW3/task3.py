@@ -20,7 +20,7 @@ for elem in split:
         print(elem)
 
 text = input("Enter text: ").lower()
-reg = re.compile('[^a-zA-Z ]')
+reg = re.compile('[^a-zA-Z 0-9]')
 new_text = (reg.sub('', text))
 split = new_text.split(" ")
 print(split)
