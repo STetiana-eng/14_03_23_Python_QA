@@ -7,7 +7,7 @@
 #upper_limit = 37.339
 #> match: "x-store", "main-service"
 
-my_dict = { "citos": 47.999,
+my_dict = {"citos": 47.999,
          "BB_studio": 42.999,
          "mo-no": 49.999,
          "my-main-service": 37.245,
