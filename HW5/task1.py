@@ -15,13 +15,12 @@ users_from_one_city = []
 for user in users:
  hair = user.get("hair")
  age = user.get("age")
+ address = user.get("address")
  if hair.get("color") == "Brown":
   age_list.append(age)
-print(int(np.mean(age_list)))
-for user in users:
- address = user.get("address")
  if address.get("city") == "Louisville":
   users_from_one_city.append(user)
+print(int(np.mean(age_list)))
 print(users_from_one_city)
 
 

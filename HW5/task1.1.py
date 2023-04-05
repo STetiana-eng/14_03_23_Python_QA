@@ -18,7 +18,7 @@ for user in users:
  address = user.get("address")
  if hair.get("color") == "Brown":
   age_list.append(age)
- elif address.get("city") == "Louisville":
-  users_from_one_city.append(user)
+  if address.get("city") == "Louisville":
+    users_from_one_city.append(user)
 print(int(np.mean(age_list)))
 print(users_from_one_city)
