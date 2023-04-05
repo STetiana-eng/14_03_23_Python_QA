@@ -1,8 +1,8 @@
 
 from pprint import pprint
 #вивести в консоль середній вік чоловіків з Brown волоссям, а також сформувати список людей,
-# що проживають в місті Louisville. Реалізація якщо потрібно окремо порахувати середній вік людей з коричньовим волоссям
-# та окремо зробити вибірку людей які живуть  в місті Louisville
+# що проживають в місті Louisville. Реалізація якщо потрібно  порахувати середній вік людей з коричньовим волоссям
+# та  з цьої виборки  зробити вибірку людей які живуть  в місті Louisville
 import requests
 import numpy as np
 url = "https://dummyjson.com/users?limit=100"
@@ -15,17 +15,10 @@ users_from_one_city = []
 for user in users:
  hair = user.get("hair")
  age = user.get("age")
+ address = user.get("address")
  if hair.get("color") == "Brown":
   age_list.append(age)
-print(int(np.mean(age_list)))
-for user in users:
- address = user.get("address")
- if address.get("city") == "Louisville":
+ elif address.get("city") == "Louisville":
   users_from_one_city.append(user)
+print(int(np.mean(age_list)))
 print(users_from_one_city)
-
-
-
-
-
-
