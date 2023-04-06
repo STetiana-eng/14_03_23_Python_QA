@@ -8,13 +8,12 @@ import numpy as np
 url = "https://dummyjson.com/users?limit=100"
 response = requests.get(url)
 our_users = response.json()
-users_hair = response.json()
 users = our_users.get("users",[])
 age_list = []
 users_from_one_city = []
 for user in users:
- hair = user.get("hair")
- age = user.get("age")
+ hair = user.get("hair", 0)
+ age = user.get("age", 0)
  address = user.get("address")
  if hair.get("color") == "Brown":
   age_list.append(age)
