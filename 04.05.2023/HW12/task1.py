@@ -24,17 +24,12 @@ print(f.read())
 f.close
 
 
-lines = []
-while True:
- line = input()
- if line != "":
-  lines.append(line)
-  break
-
-
 with open("input_console_file.txt", "a") as f:
-   f.writelines(lines)
-
+  while True:
+   line = input()
+   if line != "":
+    break
+  f.writelines(line)
 
 
 
