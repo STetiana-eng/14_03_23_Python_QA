@@ -6,7 +6,7 @@ try:
         result = number/10
         print(result)
 except Exception:
- print("str cannot be divided by a number ")
+ print( "This action is incorrect ")
 
 
 
@@ -19,4 +19,9 @@ try:
         new_number = x**y
 except ArithmeticError as e:
     print(f"{e}")
+finally:
+    print("If you have some mistakes try to change number")
+
+
+
 
